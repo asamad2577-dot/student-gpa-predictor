@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project structure
+
+- Keep the student GPA predictor as the root page; isolate API payload and response handling in `src/lib/prediction.ts` with focused contract tests, and proxy the external prediction request through a validated TanStack server function because the provider blocks browser CORS.

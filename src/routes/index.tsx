@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { ArrowRight, Check, ExternalLink, GraduationCap, LoaderCircle } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   createPredictionPayload,
@@ -282,12 +282,15 @@ function Index() {
                   model, preprocessing scaler, and the student dataset. The model derives grade
                   trend and prior academic strength from the supplied grades before predicting.
                 </p>
-                <Button asChild variant="outline" className="mt-4 gap-2">
-                  <a href={repoUrl} target="_blank" rel="noreferrer">
-                    View project on GitHub
-                    <ExternalLink aria-hidden="true" />
-                  </a>
-                </Button>
+                <a
+                  href={repoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={buttonVariants({ variant: "outline", className: "mt-4 gap-2" })}
+                >
+                  View project on GitHub
+                  <ExternalLink aria-hidden="true" />
+                </a>
               </div>
             </div>
           </div>

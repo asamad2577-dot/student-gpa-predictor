@@ -59,6 +59,12 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-predictor-surface: var(--predictor-surface);
+  --color-predictor-line: var(--predictor-line);
+  --color-predictor-success: var(--predictor-success);
+  --color-predictor-success-surface: var(--predictor-success-surface);
+  --color-predictor-error: var(--predictor-error);
+  --color-predictor-error-surface: var(--predictor-error-surface);
 }
 
 :root {
@@ -82,6 +88,12 @@
   --border: oklch(0.929 0.013 255.508);
   --input: oklch(0.929 0.013 255.508);
   --ring: oklch(0.704 0.04 256.788);
+  --predictor-surface: oklch(0.985 0.006 255);
+  --predictor-line: oklch(0.93 0.012 255);
+  --predictor-success: oklch(0.42 0.12 153);
+  --predictor-success-surface: oklch(0.97 0.025 153);
+  --predictor-error: oklch(0.5 0.18 25);
+  --predictor-error-surface: oklch(0.98 0.018 25);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -95,6 +107,8 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --shadow-predictor: 0 12px 32px -18px oklch(0.24 0.035 255 / 22%),
+    0 2px 6px -4px oklch(0.24 0.035 255 / 12%);
 }
 
 .dark {
@@ -117,6 +131,12 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.551 0.027 264.364);
+  --predictor-surface: oklch(0.19 0.017 255);
+  --predictor-line: oklch(1 0 0 / 10%);
+  --predictor-success: oklch(0.78 0.13 153);
+  --predictor-success-surface: oklch(0.25 0.035 153);
+  --predictor-error: oklch(0.77 0.14 25);
+  --predictor-error-surface: oklch(0.27 0.035 25);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -130,6 +150,8 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --shadow-predictor: 0 12px 32px -18px oklch(0.08 0.02 255 / 36%),
+    0 2px 6px -4px oklch(0.08 0.02 255 / 24%);
 }
 
 @layer base {
@@ -141,4 +163,8 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+@utility predictor-shadow {
+  box-shadow: var(--shadow-predictor);
 }
